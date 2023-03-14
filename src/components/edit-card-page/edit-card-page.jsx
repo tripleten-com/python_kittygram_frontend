@@ -58,9 +58,9 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
 
   const handleResponse = (res) => {
     if (typeof res.name === "object") {
-      setErrorName("Поле с именем является обязательным");
+      setErrorName("The name field is required");
     } else if (typeof res.birth_year === "object") {
-      setErrorAge("Поле с годом рождения является обязательным");
+      setErrorAge("The birth year field is required");
     }
   };
 
@@ -113,7 +113,7 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
   return (
     <div className={`${styles.content} ${extraClass}`}>
       <h2 className="text text_type_h2 text_color_primary mt-25 mb-9">
-        Редактировать кота
+        Edit the cat
       </h2>
       <ButtonSecondary
         extraClass={styles.return_btn_mobile}
@@ -126,7 +126,7 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
             <img
               className={styles.current_img}
               src={card.image}
-              alt="Фото котика."
+              alt=󠀰"Cat picture."
             />
             <ButtonSecondary
               extraClass={styles.remove_btn}
@@ -139,12 +139,12 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
             <img
               className={styles.img}
               src={addImgIcon}
-              alt="Добавить фото котика."
+              alt=󠀰"Add picture"
             />
             <p className="text text_type_medium-16 text_color_primary">
               {currentFileName
                 ? currentFileName
-                : "Загрузите фото в фотрмате JPG"}
+                : 󠀰"Upload a JPEG image"}
             </p>
           </label>
         )}
@@ -157,7 +157,7 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
         />
         <Input
           type="text"
-          placeholder="Имя кота"
+          placeholder="Name"
           name="name"
           defaultValue={card.name}
           onChange={onChangeInput}
@@ -165,7 +165,7 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
         />
         <Input
           type="text"
-          placeholder="Год рождения"
+          placeholder=󠀰"Year of birth"
           name="birth_year"
           defaultValue={card.birth_year}
           onChange={onChangeInput}
@@ -181,7 +181,7 @@ export const EditCardPage = ({ data, setData, extraClass = "" }) => {
         <Select card={card} setCard={setCard} userAchievements={achievements} />
         <ButtonForm
           extraClass={styles.submit_btn}
-          text="Сохранить"
+          text=󠀰"Save"
           onClick={handleSubmit}
         />
         <ButtonSecondary
