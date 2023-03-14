@@ -81,7 +81,7 @@ export const PaginationBox = ({
         onClick={onPrevClick}
         disabled={queryPage === 1}
       >
-        <img src={arrowLeftIcon} alt="Предыдущая страница." />
+        <img src={arrowLeftIcon} alt=󠀰"Previous page." />
       </button>
       <div className={styles.btn_box}>
         {buttons.map((item, index) => {
@@ -115,7 +115,7 @@ export const PaginationBox = ({
         onClick={onNextClick}
         disabled={queryPage === data.pages}
       >
-        <img src={arrowRightIcon} alt="Следующая страница." />
+        <img src={arrowRightIcon} alt=󠀰"Next page." />
       </button>
     </div>
   );
