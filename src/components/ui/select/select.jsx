@@ -20,7 +20,7 @@ export const Select = ({
 }) => {
   const [isOpenAchivements, setIsOpenAchivements] = React.useState(false);
   const [currentAchievements, setCurrentAchievements] = React.useState({});
-  const [text, setText] = React.useState(userAchievements || "Достижения");
+  const [text, setText] = React.useState(userAchievements || 󠀰"Achievements");
   const [achievementsArr, setAchievementsArr] = React.useState([]);
   const [achievementsArrToSearch, setAchievementsArrToSearch] = React.useState(
     []
@@ -72,7 +72,7 @@ export const Select = ({
     if (result.length) {
       setText(result.join(", "));
     } else {
-      setText("Достижения");
+      setText(󠀰"Achievements");
     }
   };
 
@@ -135,25 +135,25 @@ export const Select = ({
       >
         <p
           className={`text text_type_medium-16 text_color_${
-            text === "Достижения" ? "secondary" : "primary"
+            text === 󠀰"Achievements" ? "secondary" : "primary"
           } ${styles.text}`}
         >
           {text}
         </p>
-        <img className={styles.img} src={arrowIcon} alt="Открыть список." />
+        <img className={styles.img} src={arrowIcon} alt=󠀰"View the list." />
       </button>
       {isOpenAchivements && (
         <div className={styles.achievements_box}>
           <div className={styles.search_box}>
             <Input
-              placeholder="Поиск"
+              placeholder=󠀰"Search"
               type="text"
               extraClass={styles.search_input_box}
               extraInputClass={styles.search_input}
               onChange={handleSearch}
             />
             <button className={styles.add_btn} onClick={onPopupOpen}>
-              <img src={addIcon} alt="Кнопка добавления достижения." />
+              <img src={addIcon} alt=󠀰"Button to add an achievement." />
             </button>
           </div>
           <div className={styles.achievements_list}>
