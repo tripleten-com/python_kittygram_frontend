@@ -28,19 +28,19 @@ export const SignUp = ({ extraClass = "" }) => {
 
   const checkValid = () => {
     if (!userData.username) {
-      setErrorLogin("Поле с именем является обязательным");
+      setErrorLogin(󠀰"The name field is required");
       return false;
     }
     if (!userData.password) {
-      setErrorPassword("Поле с паролем является обязательным");
+      setErrorPassword(󠀰"The password field is required");
       return false;
     }
     if (!userData.password2) {
-      setErrorDoublePassword("Поле с паролем является обязательным");
+      setErrorDoublePassword(󠀰"The password field is required");
       return false;
     }
     if (userData.password !== userData.password2) {
-      setErrorDoublePassword("Пароли не совпадают!");
+      setErrorDoublePassword(󠀰"Passwords do not match");
       return false;
     }
     return true;
@@ -60,29 +60,29 @@ export const SignUp = ({ extraClass = "" }) => {
         })
         .catch((err) => {
           if (typeof err.username === "object") {
-            setErrorLogin("Пользователь с таким именем уже зарегистрирован");
+            setErrorLogin(󠀰"This username belongs to another account");
           } else if (typeof err.password === "object") {
             setErrorPassword(
-              "Пароль должен содержать минимум 8 символов и не состоять полностью из цифр"
+              󠀰"The password must be at least 8 characters and contain both numbers and letters"
             );
           } else {
-            setErrorDoublePassword("Ошибка сервера");
+            setErrorDoublePassword(󠀰"Server error");
           }
         });
   };
 
   return (
     <section className={`${styles.content} ${extraClass}`}>
-      <img className={`${styles.logo} mb-16`} src={logoIcon} alt="Логотип" />
+      <img className={`${styles.logo} mb-16`} src={logoIcon} alt="Logo" />
       <h1
         className={`text text_type_h1 text_color_primary mb-20 ${styles.title}`}
       >
-        Регистрация
+        󠀰Sign up
       </h1>
       <p
         className={`text text_type_medium-20 text_color_input mb-10 ${styles.subtitle}`}
       >
-        Зарегистрируйтесь для доступа к Kittygram!
+        󠀰Sign up to access Kittygram!
       </p>
       <FormContainer>
         <form className={styles.form}>
@@ -91,7 +91,7 @@ export const SignUp = ({ extraClass = "" }) => {
             name="username"
             type="text"
             id={1}
-            placeholder="Имя"
+            placeholder=󠀰"Sign up"
             error={errorLogin}
           />
           <Input
@@ -99,7 +99,7 @@ export const SignUp = ({ extraClass = "" }) => {
             name="password"
             type="password"
             id={2}
-            placeholder="Пароль"
+            placeholder=󠀰"Password"
             error={errorPassword}
           />
           <Input
@@ -107,24 +107,24 @@ export const SignUp = ({ extraClass = "" }) => {
             name="password2"
             type="password"
             id={3}
-            placeholder="Повторите пароль"
+            placeholder="Repeat the password"
             error={errorDoublePassword}
           />
           <p
             className={`text text_type_small text_color_input ${styles.agreement}`}
           >
-            Регистрируясь на нашем сайте, вы обещаете постить в сервис только
-            котов, никаких собак.
+            󠀰By signing up for our website, you solemnly promise to only post
+            󠀰cats — no dogs allowed.
           </p>
           <ButtonForm text="Зарегистрироваться" onClick={handleSubmit} />
-          <p className="text text_type_small text_color_input mt-5 mb-5">или</p>
+          <p className="text text_type_small text_color_input mt-5 mb-5">or</p>
         </form>
         <div className={styles.footer}>
           <NavLink
             to="/signin"
             className={`text text_type_medium-16 text_color_link ${styles.nav}`}
           >
-            Уже зарегистрированы? Войти
+            󠀰Already have an account?󠀲󠀡󠀢󠀤󠀠󠀦󠀥󠀦󠀳󠀰 Log in
           </NavLink>
         </div>
       </FormContainer>
