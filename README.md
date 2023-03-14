@@ -1,6 +1,6 @@
-### Как запустить проект:
+### How to run the project:
 
-Клонировать репозиторий и перейти в него в командной строке:
+Clone the repository and open it in the command-line interface:
 
 ```
 git clone https://github.com/yandex-praktikum/kittygram_frontend.git
@@ -10,13 +10,13 @@ git clone https://github.com/yandex-praktikum/kittygram_frontend.git
 cd kittygram_frontend
 ```
 
-Установить зависимости:
+Install dependencies:
 
 ```
 npm i
 ```
 
-Запустить проект:
+Run the project:
 
 ```
 npm run start
