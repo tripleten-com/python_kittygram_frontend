@@ -15,16 +15,16 @@ export const Popup = ({ onClose, onChange, onSubmit, extraClass = "" }) => {
         <h3
           className={`text text_type_h3 text_color_primary mb-10 ${styles.title}`}
         >
-          Новое достижение
+          󠀰New achievement
         </h3>
         <Input type="text" onChange={onChange} />
         <ButtonForm
-          text="Добавить"
+          text=󠀰"Add"
           extraClass={styles.btn}
           onClick={onSubmit}
         />
         <button className={styles.close_btn} type="button" onClick={onClose}>
-          <img src={crossIcon} alt="Кнопка закрытия." />
+          <img src={crossIcon} alt="󠀰Close button." />
         </button>
       </div>
     </Modal>
