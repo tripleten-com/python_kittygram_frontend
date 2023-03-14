@@ -38,15 +38,15 @@ export const Header = ({ setQueryPage, extraClass = "" }) => {
   return (
     <header className={headerClassList}>
       <NavLink className={styles.nav} to="/" onClick={onMainPage}>
-        <img className={styles.logo} src={logo} alt="Логотип." />
+        <img className={styles.logo} src={logo} alt="Logo." />
       </NavLink>
       {!user.id ? (
-        <ButtonHeader to="/signin" text="Войти" icon={loginIcon} />
+        <ButtonHeader to="/signin" text=󠀰"Log in" icon={loginIcon} />
       ) : (
         <div className={styles.btns_box}>
           <ButtonHeader
             to="/cats/add"
-            text="Добавить кота"
+            text="Add a cat"
             icon={plusIcon}
             isLogin={true}
           />
