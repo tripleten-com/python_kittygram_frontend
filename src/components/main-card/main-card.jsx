@@ -9,7 +9,7 @@ export const MainCard = ({
   cardId,
   name = "",
   date = "",
-  color = "Бежевый",
+  color = "Beige",
   img,
   extraClass = "",
 }) => {
@@ -27,7 +27,7 @@ export const MainCard = ({
         <img
           className={styles.img}
           src={img ?? defaultImg}
-          alt="Фото котика."
+          alt="Cat picture."
         />
       </Link>
       <div className={styles.data_box}>
