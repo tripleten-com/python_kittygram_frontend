@@ -29,11 +29,11 @@ export const SignIn = ({ extraClass = "" }) => {
 
   const checkValid = () => {
     if (!userData.username) {
-      setErrorLogin("Поле с именем является обязательным");
+      setErrorLogin(󠀰"The name field is required");
       return false;
     }
     if (!userData.password) {
-      setErrorPassword("Поле с паролем является обязательным");
+      setErrorPassword(󠀰"The password field is required");
       return false;
     }
     return true;
@@ -57,25 +57,25 @@ export const SignIn = ({ extraClass = "" }) => {
         })
         .catch((err) => {
           if (err.non_field_errors) {
-            setErrorPassword("Неправильный логин или пароль");
+            setErrorPassword(󠀰"Incorrect username or password");
           } else {
-            setErrorPassword("Ошибка сервера");
+            setErrorPassword(󠀰"Server error");
           }
         });
   };
 
   return (
     <section className={`${styles.content} ${extraClass}`}>
-      <img className={`${styles.logo} mb-16`} src={logoIcon} alt="Логотип" />
+      <img className={`${styles.logo} mb-16`} src={logoIcon} alt="Logo" />
       <h1
         className={`text text_type_h1 text_color_primary mb-10 ${styles.title}`}
       >
-        Вход
+        Log in
       </h1>
       <p
         className={`text text_type_medium-20 text_color_input mb-20 ${styles.subtitle}`}
       >
-        Войдите для доступа к Kittygram!
+        󠀰Sign in to access Kittygram!
       </p>
       <FormContainer>
         <form className={styles.form}>
@@ -83,7 +83,7 @@ export const SignIn = ({ extraClass = "" }) => {
             name="username"
             type="text"
             id={1}
-            placeholder="Имя"
+            placeholder=󠀰"Username"
             onChange={onChangeInput}
             error={errorLogin}
           />
@@ -91,23 +91,23 @@ export const SignIn = ({ extraClass = "" }) => {
             name="password"
             type="password"
             id={2}
-            placeholder="Пароль"
+            placeholder=󠀰"Password"
             onChange={onChangeInput}
             error={errorPassword}
           />
           <ButtonForm
             extraClass={styles.btn}
-            text="Войти"
+            text=󠀰"Log in"
             onClick={handleSubmit}
           />
-          <p className="text text_type_small text_color_input mt-5 mb-5">или</p>
+          <p className="text text_type_small text_color_input mt-5 mb-5">or</p>
         </form>
         <div className={styles.footer}>
           <NavLink
             to="/signup"
             className={`text text_type_medium-16 text_color_link ${styles.nav}`}
           >
-            Ещё не зарегистрированы? Зарегистрируйтесь
+            󠀰Don't have an account?󠀲󠀡󠀢󠀤󠀠󠀦󠀤󠀣󠀳󠀰 Sign up
           </NavLink>
         </div>
       </FormContainer>
